@@ -17,6 +17,12 @@ app.use(express.static('./assest'))
 
 app.listen(3000)
 
+/*
+git rm -r --cached .
+git add .
+git commit -am 'git cache cleared'
+git push
+*/
 
 /*const express = require("express")
 const app = express()
