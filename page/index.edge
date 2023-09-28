@@ -1,0 +1,34 @@
+@layout('layout.master')
+
+@section('content')
+<style>
+  img{
+    width: 50px;
+    height: 50px;
+  }
+</style>
+  <a href="/create" class="badge badge-success">Create</a>
+  <table class="table table-striped">
+    <tr>
+      <td>Image</td>
+      <td>Name</td>
+      <td>Option</td>
+    </tr>
+
+    @each(d in data)
+
+    <tr>
+      <td>
+        <img src='/uploads/{{d.images}}' alt="">
+      </td>
+      <td>
+        {{d.name}}
+      </td>
+      <td>
+        <a href="/edit/{{d.id}}" class="badge badge-primary">Update</a>
+        <a href="/delete/{{d.id}}" class="badge badge-danger">Delete</a>
+      </td>
+    </tr>
+
+    @endeach
+@endsection
